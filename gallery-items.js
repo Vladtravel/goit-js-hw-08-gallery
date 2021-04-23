@@ -64,7 +64,7 @@ galleryContainer.addEventListener('click', onImageClick);
 
 function imgMarkup(gallery) {
   return gallery
-    .map(({ preview, original, description }) => {
+    .map(({ preview, description }) => {
       return `<li class="gallery__item">
         <a class="gallery__link" href="">
           <img class="gallery__image" src="${preview}" alt="${description}" />
@@ -90,4 +90,5 @@ function onImageClick(evt) {
 
 function onBtnClick(evt) {
   lightboxAddIsopen.classList.remove('is-open');
+  lightboxImage.src = '';
 }
